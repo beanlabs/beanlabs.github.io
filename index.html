@@ -84,6 +84,14 @@ you can also add titles (class="buttontitle") and links that lead to other pages
 <div class="buttontitle">rating</div>
 <div class="button" filter="g">G</div>
 <div class="button" filter="pg">PG</div>
+
+<div class="buttontitle">genre</div>
+<div class="button" filter="action">action</div>
+<div class="button" filter="adventure">adventure</div>
+<div class="button" filter="animation">animation</div>
+<div class="button" filter="comedy">comedy</div>
+<div class="button" filter="fantasy">fantasy</div>
+<div class="button" filter="kids">kids & family</div>
 </div>
 
 </div>
@@ -98,11 +106,11 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
 
 <!-- <div class="item [filters]">
         <h3>title</h3>
-        <p class="author">by author</p>
+        <p class="author">author</p>
         <p class="info">
         <b>genre:</b> genre<br>
-        <b>rating:</b> rating<br>
-        <b>words:</b> word count<br>
+        <b>runtime:</b> runtime<br>
+        <b>rt score:</b> % + %<br>
         </p>
        
         <p class="sum">
@@ -110,7 +118,7 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
         This is the summary.</p>
         
         <div class="itemlink">
-        <a href="link">link</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="link">link</a>
+        <a href="">link</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">link</a>
         </div>
     </div>
     
@@ -120,9 +128,9 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
 
 <div class="grid" class="fade-in two">
 
-    <div class="item pg unwatch">
+    <div class="item pg kids comedy adventure animation unwatch">
         <h3>Hotel Transylvania: Transformania (2022)</h3>
-        <p class="author">Columbia | Sony</p>
+        <p class="author">Sony Pictures Animation</p>
         <p class="info">
         <b>genre:</b> kids & family, comedy<br>
         <b>runtime:</b> 1h 28m<br>
@@ -138,49 +146,43 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
         </div>
     </div>
 
-<!------ START BOOK -------->
-    
-<div class="item pg unwatch">
-    <h3>The Ice Age Adventures of Buck Wild (2022)</h3>
-    <p class="author">20th Century | Blue Sky</p>
-    <p class="info">
-    <b>genre:</b> kids & family, comedy<br>
-    <b>runtime:</b> 1h 21m<br>
-    <b>rt score:</b> 19% + 36%<br>
-    </p>
-    
-    <div class="itemlink">
-    <a href="">Disney+</a>
+    <div class="item pg kids comedy adventure animation unwatch">
+        <h3>The Ice Age Adventures of Buck Wild (2022)</h3>
+        <p class="author">Blue Sky Studios</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 21m<br>
+        <b>rt score:</b> 19% + 36%<br>
+        </p>
+        
+        <div class="itemlink">
+        <a href="">Disney+</a>
+        </div>
     </div>
-</div>
 
-<!------ END BOOK ------->    
-
-<!------ START BOOK -------->
+    <div class="item pg kids comedy adventure animation watch">
+        <h3>Planes (2013)</h3>
+        <p class="author">Walt Disney Pictures</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 32m<br>
+        <b>rt score:</b> 25% + 49%<br>
+        </p>
     
-<div class="item pg watch">
-    <h3>Planes (2013)</h3>
-    <p class="author">DisneyToon | Walt Disney</p>
-    <p class="info">
-    <b>genre:</b> kids & family, comedy<br>
-    <b>runtime:</b> 1h 32m<br>
-    <b>rt score:</b> 25% + 49%<br>
-    </p>
-   
-    <p class="sum">
-    <b>Summary:</b><br>
-    Planes has enough bright colors, goofy voices, and slick animation to distract some young viewers for 92 minutes -- and probably sell plenty of toys in the bargain -- but on nearly every other level, it's a Disney disappointment.</p>
-    
-    <div class="itemlink">
-    <a href="">Prime Video</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Disney+</a>
+        <p class="sum">
+        <b>Summary:</b><br>
+        Planes has enough bright colors, goofy voices, and slick animation to distract some young viewers for 92 minutes -- and probably sell plenty of toys in the bargain -- but on nearly every other level, it's a Disney disappointment.</p>
+        
+        <div class="itemlink">
+        <a href="">Prime Video</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Disney+</a>
+        </div>
     </div>
-</div>
 
 <!------ END BOOK ------->    
 
 <!------ START BOOK -------->    
     
-<div class="item pg watch">
+<div class="item pg kids action comedy animation watch">
     <h3>Foodfight! (2012)</h3>
     <p class="author">Threshold Digital Research Labs</p>
     <p class="info">
@@ -198,9 +200,9 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
 
 <!------ START BOOK -------->
 
-    <div class="item pg watch">
+    <div class="item pg fantasy adventure watch">
         <h3>The Last Airbender (2010)</h3>
-        <p class="author">Blinding Edge | Paramount</p>
+        <p class="author">Paramount Pictures</p>
         <p class="info">
         <b>genre:</b> fantasy, adventure<br>
         <b>runtime:</b> 1h 43m<br>
@@ -220,9 +222,9 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
     
 <!------ START BOOK -------->
     
-    <div class="item g watch">
+    <div class="item g kids comedy animation watch">
         <h3>Chicken Little (2005)</h3>
-        <p class="author">Walt Disney | British International</p>
+        <p class="author">Walt Disney Pictures</p>
         <p class="info">
         <b>genre:</b> kids & family, comedy<br>
         <b>runtime:</b> 1h 21m<br>
@@ -239,6 +241,24 @@ BOOK/ITEM/WHATEVER TEMPLATE: -->
     </div>
 
 <!------ END BOOK ------->   
+
+    <div class="item pg kids comedy adventure animation watch">
+        <h3>Shark Tale (2004)</h3>
+        <p class="author">Dreamworks SKG</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 30m<br>
+        <b>rt score:</b> 35% + 46%<br>
+        </p>
+    
+        <p class="sum">
+        <b>Summary:</b><br>
+        Derivative and full of pop culture in-jokes.</p>
+        
+        <div class="itemlink">
+        <a href="">Netflix</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Prime Video</a>
+        </div>
+    </div>
     
 </div>
 
