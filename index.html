@@ -13,6 +13,7 @@
 
 <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css" />
 
 <!-- script for masonry + filtering (credit to http://cyantists.tumblr.com) --> 
 
@@ -39,322 +40,7 @@ $(".button").click(function(){
 
 <!-- cactus icon by smashicons (https://thenounproject.com/smashicons/) -->
 
-<style type="text/css">
 
-/* GENERAL STUFF */
-
-::-webkit-scrollbar {
-    width:6px;
-    height:6px;
-    background:#e5e5e5;
-    border:2px solid #fff;
-}
-
-::-webkit-scrollbar-thumb {
-    background:#d9d5f0;
-    border:2px solid #fff;
-}
-
-::selection {color:#f6f6f6;background:#dbddf3;}
-::-moz-selection {color:#f6f6f6;background:#dbddf3;}
-
-/* script for tumblr controls (credit to http://odeysseus.tumblr.com) */
-
-.tmblr-iframe{ 
-    white-space:nowrap; 
-    -webkit-filter: invert(100%); 
-    -moz-filter: invert(100%); 
-    -o-filter: invert(100%); 
-    -ms-filter: invert(100%); 
-    filter: invert(100%);
-    opacity:.2;
-    transition: .4s ease-in-out; 
-    -webkit-transition: .4s ease-in-out;
-    -moz-transition: .4s ease-in-out;
-    -o-transition: .4s ease-in-out;
-    position:fixed!important;
-    right:5px !important;
-    transform:scale(0.7,0.7); 
-    z-index:9999999;
-    top:2px !important;} 
-
-.tmblr-iframe:hover {  opacity:.6 }  
-
-div.status-indicator {
-    filter:invert(1)!important;
-}
-
-body {
-    background:#f6f6f6;
-    color:#b6b6b6;
-    font-family:karla;
-    overflow:auto;
-}
-
-a {
-    color:#000;
-    text-decoration:none;
-}
-
-
-/* TOPBAR */
-
-#topbar {
-    position:fixed;
-    top:0;
-    left:0;
-    height:60px;
-    width:100%;
-    background:#fff; /* background color topbar */
-    border-bottom:2px solid #ddd; /* border color topbar */
-    z-index:8;
-}
-
-.icon img {
-    position:fixed;
-    top:10px;
-    left:40px;
-    height:40px;
-    width:40px;
-    border-radius:45px;
-    transition:all .5s ease-in-out;
-    -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
-}
-
-.icon img:hover {
-    border-radius:10px;
-    opacity:.6;
-}
-
-.title {
-    position:fixed;
-    top:18px;
-    left:90px;
-    font-size:20px;
-    color:#000; /* color title */
-    border-bottom:2px solid #dfddf3; /* border color title */
-}
-
-.border {
-    position:fixed;
-    top:0;
-    left:180px;
-    height:100%;
-    border-left:2px solid #ddd; /* border color leftbar */
-}
-
-.navlinks {
-    position:fixed;
-    top:22px;
-    left:230px;
-    font-size:15px;
-}
-
-.link {
-    margin-right:50px;
-    padding-bottom:2px;
-    border-bottom:1px solid #dfddf3; /* border color links */
-    transition:all .5s ease-in-out;
-    -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
-}
-
-.link:hover {
-    opacity:.6;
-    border-bottom:1px solid #edebf8; /* border color links after hover */
-}
-
-.fa {
-    padding-right:5px;
-    color:#000; /* icon color */
-}
-
-/* LEFTBAR */
-
-#leftbar {
-    position:fixed;
-    top:60px;
-    left:0;
-    height:100%;
-    width:180px;
-    background:#fff; /* background color leftbar */
-    z-index:5;
-}
-
-.buttoncon {
-    position:fixed;
-    top:68px;
-    left:35px;
-}
-
-.buttontitle {
-    text-decoration:underline;
-    color:#000; /* filter subtitles color */
-    text-transform:uppercase;
-    margin-top:12px;
-    margin-bottom:4px;
-}
-
-
-.button, .buttonlink, .buttonlink a {
-    cursor:pointer;
-    transition:all .5s ease-in-out;
-    -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
-    font-size:14px;
-    color:#999; /* color filters */
-}
-
-.buttonlink a:hover, .button:hover, .button.selected {
-    color:#000; /* color filters when hovering / when selected */
-    margin-left:5px;
-}
-
-/* BOOKS/ITEMS/FICS/WHATEVER */
-
-.grid {
-    left:220px;
-    top:85px;
-    width:1100px;
-    z-index:1;
-}
-
-.item {
-    width:250px;
-    background:#fff; /* background color books */
-    padding:15px;
-    float:left;
-    margin:20px;
-    border-radius:4px;
-    height:auto;
-    border: 1px solid #eee; /* border color books */
-}
-
-.item h3 {
-    margin-top:-4px;
-    text-transform:uppercase;
-    color:#777;
-}
-
-.author {
-    margin-top:-20px;
-    margin-bottom:25px;
-    text-transform:lowercase;
-    font-size:14px;
-}
-
-.fav:after {
-    position:absolute;
-    top:12px;
-    left:85%;
-    content:'fav';
-    border:1px solid #777; /* border color fav circle */
-    padding:2px;
-    font-size:11px;
-    border-radius:40px;
-    color:#777; /* color fav text */
-}
-
-.info {
-    margin-top:-16px;
-    font-size:13px;
-    text-transform:uppercase;
-    width:100%;
-    padding-bottom:11px;
-    font-style:italic;
-    color:#888; /* color genre/rating */
-    border-bottom:1px solid #ddd; /* color border between genre/rating and summary */
-}
-
-.sum {
-    margin-top:-1px;
-    font-size:14px;
-    width:100%;
-    padding-bottom:15px;
-    color:#888; /* color summary */
-    border-bottom:1px solid #ddd; /*color border between summary and links */
-}
-
-.sum b {
-    text-transform:uppercase;
-    font-size:13px;
-}
-
-.itemlink {
-    margin-top:-1px;
-    letter-spacing:.3px;
-    text-align:center;
-    text-transform:uppercase;
-    font-size:14px;
-}
-
-.itemlink a {
-    color:#888;
-    transition:all .5s ease-in-out;
-    -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
-}
-
-.itemlink a:hover {
-    color:#000;
-}
-
-/* DON'T MESS WITH THIS PLS */
-
-#credz {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    z-index:99!important;
-}
-
-#credz .ci {
-    background:#fff;
-    padding:7px 8px 5px 8px;
-    border-radius:50px;
-    box-shadow:0px 0px 1px rgba(0,0,0,.1);
-    transition:all .5s ease-in-out;
-}
-
-#credz .ci:hover {
-    transform:scale(1.1);
-}
-
-#credz img {
-    width:35px;
-}
-
-/* script for fade in (credit to http://cyantists.tumblr.com) */
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-.fade-in {
-   opacity:0;
-   -webkit-animation:fadeIn ease-in 1;
-   -moz-animation:fadeIn ease-in 1;
-   animation:fadeIn ease-in 1;
-   -webkit-animation-fill-mode:forwards;
-   -moz-animation-fill-mode:forwards;
-   animation-fill-mode:forwards;
-   -webkit-animation-duration:1s;
-   -moz-animation-duration:1s;
-   animation-duration:1s;}
-.fade-in.one {
-   -webkit-animation-delay:0s;
-   -moz-animation-delay:0s;
-   animation-delay:0s;}
-.fade-in.two {
-   -webkit-animation-delay:0.8s;
-   -moz-animation-delay:0.8s;
-   animation-delay:0.8s;}
-
-</style>
 </head>
 <body>
 
@@ -389,16 +75,14 @@ you can also add titles (class="buttontitle") and links that lead to other pages
 
 <div class="buttoncon">
 
-<div class="buttontitle">title!!!</div>
+<div class="buttontitle">filters!</div>
 <div class="button selected" filter="item">show all</div>
 <div class="button" filter="fav">favorites</div>
-<div class="buttonlink"><a href="link">this is a link</a></div>
-<div class="buttonlink"><a href="link">also a link</a></div>
+<div class="button" filter="unwatch">unwatched</div>
+<div class="button" filter="watch">watched</div>
 
-<div class="buttontitle">another title</div>
-<div class="button" filter="filter1">filter</div>
-<div class="button" filter="filter2">another filter</div>
-<div class="button" filter="filter3">so many filters omg</div>
+<div class="buttontitle">rating</div>
+<div class="button" filter="pg">PG</div>
 </div>
 
 </div>
@@ -407,7 +91,7 @@ you can also add titles (class="buttontitle") and links that lead to other pages
 
 <!-- this is where you can add/edit the books. it's pretty straightforward. don't delete the item class. add other classes after item to apply filters. you can add as many books as you want ^^ 
 
-BOOK/ITEM/WHATEVER TEMPLATE: 
+BOOK/ITEM/WHATEVER TEMPLATE: -->
 
 <!------ START BOOK -------->
 
@@ -437,21 +121,21 @@ BOOK/ITEM/WHATEVER TEMPLATE:
 
 <!------ START BOOK -------->
 
-    <div class="item filter1 fav">
-        <h3>title</h3>
-        <p class="author">by author</p>
+    <div class="item pg watch">
+        <h3>the last airbender (2010)</h3>
+        <p class="author">M. Night Shyamalan | Paramount Pictures</p>
         <p class="info">
-        <b>genre:</b> genre<br>
-        <b>rating:</b> rating<br>
-        <b>words:</b> word count<br>
+        <b>genre:</b> fantasy, adventure<br>
+        <b>runtime:</b> 1h 43m<br>
+        <b>rt score:</b> 5% + 30%<br>
         </p>
        
         <p class="sum">
         <b>Summary:</b><br>
-        This is the summary.</p>
+        The four nations of Air, Water, Earth and Fire lived in harmony until the Fire Nation declared war. A century later, there is still no end in sight to the destruction, then, an Avatar named Aang discovers that he has the power to control the four elements. He joins forces with Katara, a Waterbender, and her brother, Sokka, to restore balance and harmony to their world.</p>
         
         <div class="itemlink">
-        <a href="link">link</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="link">link</a>
+        <a href="">Vudu</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Prime Video</a>
         </div>
     </div>
 
