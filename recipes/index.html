@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello Bulma!</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+        <style>
+            .grid-item { width: 380px;  }
+            .grid-item--width2 { width: 400px; }
+
+            .grid-item {
+                margin-bottom: 10px;
+            }
+
+            img {
+                object-fit: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="section">
+            <div class="columns">
+                <div class="column is-one-fifth">
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="answer">
+                            Beverages
+                        </label>
+
+                        <label class="radio">
+                            <input type="radio" name="answer">
+                            Starters
+                        </label>
+
+                        <label class="radio">
+                            <input type="radio" name="answer">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 400 }'>
+                        <script>
+                            let recipes = [
+                                {
+                                    "name": "Avocado Féroce (Guadeloupe)",
+                                    "image": "https://i.pinimg.com/originals/8e/a1/4c/8ea14c49c2263b20c0b2f8fe626145b9.jpg",
+                                    "link": "from Creole Kitchen, page 68",
+                                    "category": "starters",
+                                    "desc": "This Guadeloupe version of the recipe uses a whole hot chile; it is meant to burn and shake you up."
+                                },
+
+                                {
+                                    "name": "Avocado Féroce (Martinique)",
+                                    "image": "https://i.pinimg.com/originals/8e/a1/4c/8ea14c49c2263b20c0b2f8fe626145b9.jpg",
+                                    "link": "from Creole Kitchen, page 66",
+                                    "category": "starters",
+                                    "desc": "Shredded fish and avocado balls make for a filling brunch snack!"
+                                },
+
+                                {
+                                    "name": "Coconut Punch",
+                                    "image": "https://www.marathonsandmotivation.com/wp-content/uploads/2021/06/Coconut_Punch_with_cinnamon_and_coconut_on_top.jpg",
+                                    "link": "from Creole Kitchen, page 46",
+                                    "category": "drinks",
+                                    "desc": "A deliciously creamy and traditionally Christmas-y beverage."
+                                },
+
+                                {
+                                    "name": "Creole-Style Okra",
+                                    "image": "https://www.theblackpeppercorn.com/wp-content/uploads/2018/11/Creole-Style-Stewed-Okra-facebook-hires.jpg",
+                                    "link": "from Creole Kitchen, page 69",
+                                    "category": "starters",
+                                    "desc": "Is it a soup or a salad?"
+                                },
+
+                                {
+                                    "name": "Coolly",
+                                    "image": "https://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2015/8/18/0/GCKIM309H_Coconut-Punch_s4x3.jpg.rend.hgtvcom.616.462.suffix/1439932085073.jpeg",
+                                    "link": "from Creole Kitchen, page 48",
+                                    "category": "drinks",
+                                    "desc": "A refreshing beverage that makes use of rare lychees."
+                                },
+
+                                {
+                                    "category": "starters",
+                                    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/crab_0-9a4a33b.jpg?quality=90&resize=440,400",
+                                    "name": "Dressed Crab",
+                                    "desc": "Crab meat served in the crab's own shell. Truly horrifying.",
+                                    "link": "from Creole Kitchen, page 70",
+                                },
+
+                                {
+                                    "name": "Papacoco",
+                                    "image": "https://images.immediate.co.uk/production/volatile/sites/2/2015/08/12865.jpg",
+                                    "link": "from Creole Kitchen, page 50",
+                                    "category": "drinks",
+                                    "desc": "A milky and fruity beverage made with lots of fresh papaya."
+                                },
+
+                                {
+                                    "name": "Shrubb",
+                                    "image": "https://assets.bonappetit.com/photos/60a3e65341ef9619801e3a43/1:1/w_2560%2Cc_limit/0621-61.jpg",
+                                    "link": "from Creole Kitchen, page 52",
+                                    "category": "drinks",
+                                    "desc": "A traditional Christmas liqueur, heavy on orange flavour."
+                                },
+
+                                {
+                                    "category": "",
+                                    "image": "https://bulma.io/images/placeholders/1280x960.png",
+                                    "name": "",
+                                    "desc": "",
+                                    "link": "from , page ",
+                                },
+                            ];
+                            
+                            for (let recipe of recipes) {
+                                document.write(
+                                    `<div class="grid-item ${recipe.category}">
+                                        <article class="media">
+                                            <figure class="media-left">
+                                                <p class="image is-128x128">
+                                                    <img src="${recipe.image}">
+                                                </p>
+                                            </figure>
+
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <p>
+                                                        <strong>${recipe.name}</strong>
+                                                        <br>
+                                                        ${recipe.desc}
+                                                        <br>
+                                                        <small>${recipe.link}</small>
+                                                    </p>
+                                                </div>
+
+                                                <nav class="level is-mobile">
+                                                    <div class="level-left">
+                                                        <a class="level-item">
+                                                        <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                                        </a>
+                                                        <a class="level-item">
+                                                        <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                                                        </a>
+                                                        <a class="level-item">
+                                                        <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                                        </a>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </article>
+                                    </div>`
+                                )
+                            }
+
+                        </script>
+                    </div>
+                </div>
+              </div>
+        </section>
+    </body>
+</html>
+
+<!--
+    `<div class="grid-item ${recipe.category}">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <figure class="image is-4by3"><img src="${recipe.image}" alt="Placeholder image"></figure>
+                                            </div>
+
+                                            <header class="card-header">
+                                                <p class="card-header-title">${recipe.name}</p>
+
+                                                <button class="card-header-icon" aria-label="more options">
+                                                    <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                                                </button>
+                                            </header>
+
+                                            <div class="card-content">
+                                                <div class="content">${recipe.desc}</div>
+                                            </div>
+
+                                            <footer class="card-footer">
+                                                <p class="card-footer-item"><span>${recipe.link}</span></p>
+                                            </footer>
+                                        </div>
+                                    </div>`
+-->

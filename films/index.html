@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<!--- 
+
+                                FIC REC PAGE 1
+                                by cactusthemes
+--->
+
+<head>
+
+<title>Films</title>
+<link rel="shortcut icon" href="{Favicon}">
+
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css" />
+
+<!-- script for masonry + filtering (credit to http://cyantists.tumblr.com) --> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/xd6ujov/9Rpouml9f/imagesloaded.pkgd.min.js"></script> 
+<script src="https://static.tumblr.com/f6blkfc/3khouzw5b/masonry.pkgd.min.js"></script>
+
+<script>$(document).ready(function(){
+var $grid = $(".grid"); $grid.imagesLoaded(function() {
+   $grid.masonry({
+       itemSelector: ".item",
+       columnWidth: 115
+   });
+});
+$(".button").click(function(){
+   $(this).addClass("selected");
+   $(".button").not($(this)).removeClass("selected");
+   var ssf = $(this).attr("filter");
+   $(".item." + ssf).show();
+   $(".item").not("." + ssf).hide();
+   $grid.masonry();
+});
+});</script>
+
+<!-- cactus icon by smashicons (https://thenounproject.com/smashicons/) -->
+
+
+</head>
+<body>
+
+<div id="topbar" class="fade-in one">
+
+<a class="homelink" href="/">
+<div class="icon"><img src="https://78.media.tumblr.com/e8350f2a201da5dd400ac073333e102a/tumblr_oyx5r11xNh1tyjfbko1_75sq.png"></div> <!-- insert your own icon here (40x40) -->
+
+<div class="title">title</div> <!-- make title short pls -->
+</a>
+
+<div class="border"></div> <!-- don't mess w this one -->
+
+<!-- you can insert as many links as fit on the screen. if you want other icons, you can find those here (http://fontawesome.io/cheatsheet/). be sure to format them like <i class="fa ICON-NR" aria-hidden="true" ></i> -->
+
+<div class="navlinks">
+
+<a href="/" class="link"><i class="fa fa-home" aria-hidden="true" ></i>home</a>
+<a href="/ask" class="link"><i class="fa fa-commenting-o" aria-hidden="true" ></i>ask</a>
+<a href="link" class="link"><i class="fa fa-user" aria-hidden="true" ></i>link</a>
+<a href="link" class="link"><i class="fa fa-list-ul" aria-hidden="true" ></i>link</a>
+
+</div>
+
+</div>
+
+<div id="leftbar" class="fade-in one">
+
+<!-- woooo filters! again, you can add as many of these onto the screen as you want. just change what's in the filter="[filter]" to whatever you wanna filter on ^^ (eg filter="fluff")
+
+you can also add titles (class="buttontitle") and links that lead to other pages (class="buttonlink") here ^^ go nuts! -->
+
+<div class="buttoncon">
+
+<div class="buttontitle">filters!</div>
+<div class="button selected" filter="item">show all</div>
+<div class="button" filter="fav">favorites</div>
+<div class="button" filter="unwatch">unwatched</div>
+<div class="button" filter="watch">watched</div>
+
+<div class="buttontitle">rating</div>
+<div class="button" filter="g">G</div>
+<div class="button" filter="pg">PG</div>
+<div class="button" filter="ur">unrated</div>
+
+<div class="buttontitle">genre</div>
+<div class="button" filter="action">action</div>
+<div class="button" filter="adventure">adventure</div>
+<div class="button" filter="animation">animation</div>
+<div class="button" filter="comedy">comedy</div>
+<div class="button" filter="drama">drama</div>
+<div class="button" filter="fantasy">fantasy</div>
+<div class="button" filter="holiday">holiday</div>
+<div class="button" filter="kids">kids & family</div>
+<div class="button" filter="mystery">mystery & thriller</div>
+<div class="button" filter="scifi">sci-fi</div>
+</div>
+
+</div>
+</div>
+
+
+<!-- this is where you can add/edit the books. it's pretty straightforward. don't delete the item class. add other classes after item to apply filters. you can add as many books as you want ^^ 
+
+BOOK/ITEM/WHATEVER TEMPLATE: -->
+
+<!------ START BOOK -------->
+
+<!-- <div class="item ur unwatch">
+        <h3>title</h3>
+        <p class="author">author</p>
+        <p class="info">
+        <b>genre:</b> genre<br>
+        <b>runtime:</b> runtime<br>
+        <b>rt score:</b> % + %<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        This is the summary.</p>
+        
+        <div class="itemlink">
+        <a href="">link</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">link</a>
+        </div>
+    </div>
+    
+-->
+
+<!------ END BOOK ------->
+
+<div class="grid" class="fade-in two">
+
+    <div class="item pg kids comedy adventure animation unwatch">
+        <h3>Hotel Transylvania: Transformania (2022)</h3>
+        <p class="author">Sony Pictures Animation</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 28m<br>
+        <b>rt score:</b> 49% + 45%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Much like the trio of films it follows, Hotel Transylvania: Transformania is middling family viewing -- relatively painless, but overall rather uninspired.</p>
+    </div>
+
+    <div class="item pg kids comedy adventure animation unwatch">
+        <h3>The Ice Age Adventures of Buck Wild (2022)</h3>
+        <p class="author">Blue Sky Studios</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 21m<br>
+        <b>rt score:</b> 19% + 36%<br>
+        </p>
+    </div>
+
+    <div class="item fav ur kids comedy adventure animation watch">
+        <h3>Extinct (2021)</h3>
+        <p class="author">China Lion Entertainment Production</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 24m<br>
+        <b>rt score:</b> 43% + 36%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Two creatures time-travel from 1835 to modern-day Shanghai, where they discover their species is now extinct.</p>
+        
+        <div class="itemlink">
+        <a href="https://www.netflix.com/watch/81159137">Netflix</a>
+        </div>
+    </div>
+
+    <div class="item pg kids holiday comedy unwatch">
+        <h3>Home Sweet Home Alone (2021)</h3>
+        <p class="author">20th Century Studios</p>
+        <p class="info">
+        <b>genre:</b> kids & family, holiday<br>
+        <b>runtime:</b> 1h 33m<br>
+        <b>rt score:</b> 16% + 12%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        With a ridiculous story and an obnoxious main character who's harder to root for than the "villains," Home Sweet Home Alone is no fun for the whole family.</p>
+    </div>
+
+    <div class="item ur kids adventure comedy animation watch">
+        <h3>Pets United (2020)</h3>
+        <p class="author">author</p>
+        <p class="info">
+        <b>genre:</b> kids & family, adventure<br>
+        <b>runtime:</b> 1h 29m<br>
+        <b>rt score:</b> --% + 10%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        A stray dog and a spoiled cat lead a pack of unlikely heroes against a robot who wants to take over everything.</p>
+        
+        <div class="itemlink">
+        <a href="https://www.netflix.com/watch/80244429">Netflix</a>
+        </div>
+    </div>
+
+    <div class="item pg unwatch">
+        <h3>StarDog and TurboCat (2019)</h3>
+        <p class="author">Brilliant Casting</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 31m<br>
+        <b>rt score:</b> 50% + 37%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Launched into space in 1969, a loyal dog crash-lands in a small town where pets are no longer welcome.</p>
+    </div>
+
+    <div class="item fav ur fantasy watch">
+        <h3>Twisted Pair (2018)</h3>
+        <p class="author">Neil Breen</p>
+        <p class="info">
+        <b>genre:</b> fantasy<br>
+        <b>runtime:</b> 1h 29m<br>
+        <b>rt score:</b> --% + 60%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Twin brothers use their newfound artificial intelligence for different purposes -- one for good, one for evil.</p>
+
+        <div class="itemlink">
+            <a href="https://www.youtube.com/watch?v=GvhyfKwOJBk">YouTube</a>
+        </div>
+    </div>
+
+    <div class="item fav ur action adventure comedy watch">
+        <h3>The VelociPastor (2018)</h3>
+        <p class="author">Cyfuno Ventures</p>
+        <p class="info">
+        <b>genre:</b> action, adventure<br>
+        <b>runtime:</b> 1h 15m<br>
+        <b>rt score:</b> 61% + 72%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        After losing his parents, a priest travels to China, where he inherits a mysterious ability that allows him to turn into a dinosaur. Although he is horrified by the new power, a hooker convinces him to use it to fight crime.</p>
+
+        <div class="itemlink">
+            <a href="https://www.youtube.com/watch?v=OtJyQIgRuS8">YouTube</a>
+        </div>
+    </div>
+
+    <div class="item pg kids comedy adventure animation watch">
+        <h3>The Nut Job 2: Nutty by Nature (2017)</h3>
+        <p class="author">Open Road</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 31m<br>
+        <b>rt score:</b> 14% + 44%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        The Nut Job 2: Nutty by Nature may be a slight improvement over its predecessor, but its frantic animated antics still offer minimal entertainment to all but the least discriminating viewers.</p>
+    </div>
+
+    <div class="item fav pg kids comedy adventure animation watch">
+        <h3>Norm of the North (2016)</h3>
+        <p class="author">Lionsgate Films</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 30m<br>
+        <b>rt score:</b> 6% + 22%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        A pioneering feat in the field of twerking polar bear animation but blearily retrograde in every other respect, Norm of the North should only be screened in case of parental emergency.</p>
+    </div>
+
+    <div class="item ur scifi watch">
+        <h3>Pass Thru (2016)</h3>
+        <p class="author">Neil Breen</p>
+        <p class="info">
+        <b>genre:</b> sci-fi<br>
+        <b>runtime:</b> 1h 30m<br>
+        <b>rt score:</b> --% + 80%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        An artificial intelligence from the future visits the Earth to kill all humans.</p>
+    </div>
+
+    <div class="item fav ur drama fantasy mystery watch">
+        <h3>Fateful Findings (2013)</h3>
+        <p class="author">Neil Breen</p>
+        <p class="info">
+        <b>genre:</b> drama, fantasy<br>
+        <b>runtime:</b> 1h 40m<br>
+        <b>rt score:</b> --% + 49%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        A boy develops amazing mystical powers and uses them as an adult to hack government databases.</p>
+    </div>
+
+    <div class="item pg kids comedy adventure animation watch">
+        <h3>Planes (2013)</h3>
+        <p class="author">Walt Disney Pictures</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 32m<br>
+        <b>rt score:</b> 25% + 49%<br>
+        </p>
+    
+        <p class="sum">
+        <b>Summary:</b><br>
+        Planes has enough bright colors, goofy voices, and slick animation to distract some young viewers for 92 minutes -- and probably sell plenty of toys in the bargain -- but on nearly every other level, it's a Disney disappointment.</p>
+    </div>
+    
+    <div class="item pg kids action comedy animation watch">
+        <h3>Foodfight! (2012)</h3>
+        <p class="author">Threshold Digital Research Labs</p>
+        <p class="info">
+        <b>genre:</b> kids & family, action<br>
+        <b>runtime:</b> 1h 27m<br>
+        <b>rt score:</b> --% + 10%<br>
+        </p>
+    </div>
+
+    <div class="item g kids comedy adventure animation watch">
+        <h3>Cars 2 (2011)</h3>
+        <p class="author">Pixar Animation Studios</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 47m<br>
+        <b>rt score:</b> 40% + 49%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Cars 2 is as visually appealing as any other Pixar production, but all that dazzle can't disguise the rusty storytelling under the hood.</p>
+    </div>
+
+    <div class="item fav pg kids adventure comedy animation watch">
+        <h3>Alpha and Omega (2010)</h3>
+        <p class="author">Lionsgate Films</p>
+        <p class="info">
+        <b>genre:</b> kids & family, adventure<br>
+        <b>runtime:</b> 1h 28m<br>
+        <b>rt score:</b> 19% + 41%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        After park rangers capture and ship them halfway across the country, two wolves must find their way back home.</p>
+        
+        <div class="itemlink">
+        <a href="https://www.netflix.com/watch/70109894">Netflix</a>
+        </div>
+    </div>
+
+    <div class="item pg fantasy adventure watch">
+        <h3>The Last Airbender (2010)</h3>
+        <p class="author">Paramount Pictures</p>
+        <p class="info">
+        <b>genre:</b> fantasy, adventure<br>
+        <b>runtime:</b> 1h 43m<br>
+        <b>rt score:</b> 5% + 30%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        The Last Airbender squanders its popular source material with incomprehensible plotting, horrible acting, and detached joyless direction.</p>
+    </div>
+
+    <div class="item ur drama fantasy scifi watch">
+        <h3>I Am Here Now (2009)</h3>
+        <p class="author">Neil Breen</p>
+        <p class="info">
+        <b>genre:</b> drama, fantasy<br>
+        <b>runtime:</b> 1h 27m<br>
+        <b>rt score:</b> --% + 57%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        God takes a human form and interacts with the various sinners of Las Vegas.</p>
+    </div>
+    
+    <div class="item g kids comedy animation watch">
+        <h3>Chicken Little (2005)</h3>
+        <p class="author">Walt Disney Pictures</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 21m<br>
+        <b>rt score:</b> 36% + 47%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Disney expends more effort in the technical presentation than in crafting an original storyline.</p>
+    </div>
+
+    <div class="item ur action drama watch">
+        <h3>Double Down (2005)</h3>
+        <p class="author">Neil Breen</p>
+        <p class="info">
+        <b>genre:</b> action, drama<br>
+        <b>runtime:</b> 1h 33m<br>
+        <b>rt score:</b> --% + 53%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        A computer genius seizes control of Las Vegas.</p>
+    </div>
+
+    <div class="item fav pg kids comedy adventure animation watch">
+        <h3>Shark Tale (2004)</h3>
+        <p class="author">Dreamworks SKG</p>
+        <p class="info">
+        <b>genre:</b> kids & family, comedy<br>
+        <b>runtime:</b> 1h 30m<br>
+        <b>rt score:</b> 35% + 46%<br>
+        </p>
+    
+        <p class="sum">
+        <b>Summary:</b><br>
+        Derivative and full of pop culture in-jokes.</p>
+    </div>
+
+    <div class="item fav ur comedy watch">
+        <h3>Jesus Christ Vampire Hunter (2002)</h3>
+        <p class="author">Lee Demarbre</p>
+        <p class="info">
+        <b>genre:</b> comedy<br>
+        <b>runtime:</b> 1h 25m<br>
+        <b>rt score:</b> 80% + 59%<br>
+        </p>
+       
+        <p class="sum">
+        <b>Summary:</b><br>
+        Jesus uses kung fu to wipe out a horde of bloodsuckers who attack lesbians.</p>
+    </div>
+
+    <!-- Secret honourable mentions go to:
+    Monsters vs. Aliens (2009)                      critic score too high
+    Turbo (2013)                                    critic and audience scores too high
+    Storks (2016)                                   critic and audience scores too high
+    Hotel Transylvania 3: Summer Vacation (2018)    critic score too high
+    The Addams Family (2019)                        audience score too high
+    The Spongebob Movie: Sponge on the Run (2020)   critic score too high 
+    Trolls World Tour (2020)                        critic score too high -->
+    
+</div>
+
+<!-- DO NOT TOUCH THE CREDIT PLEASE AND THANK YOU -->
+
+<div id="credz" class="fade-in two">
+<a href="http://cactusthemes.tumblr.com" title="theme by cactusthemes">
+<div class="ci">
+<img src="https://static.tumblr.com/uxq3xua/6i1p5p058/cactus_icon_green.png">
+</div>
+</a>
+</div>
+
+</body>
+</html>
